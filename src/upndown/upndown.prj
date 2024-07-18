@@ -1,0 +1,26 @@
+<configuration>
+    <project>
+        <executable>upndown.exe</executable>
+        <options></options>
+        <namespace>upndown</namespace>
+        <template>gui</template>
+    </project>
+    <targets>
+        <target name="xforms" type="2">
+            <option>[[ #grammar tree ]]</option>
+            <option>~\scripts\xforms60.es</option>
+        </target>
+    </targets>
+    <files>
+        <module target="xforms">
+            <include>connector.xs</include>
+        </module>
+        <module>
+            <include>connector.l</include>
+            <include>main.l</include>
+        </module>
+    </files>
+     <forwards>
+        <forward key="MainWindow">upndown'Connector</forward>
+     </forwards>
+</configuration>
