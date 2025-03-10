@@ -13,10 +13,10 @@
     </targets>
     <files>
         <module target="xforms">
-            <include>connector.xs</include>
+            <include>GUI/connector.xs</include>
         </module>
         <module>
-            <include>connector.l</include>
+            <include>GUI/connector.l</include>
             <include>main.l</include>
         </module>
     </files>
