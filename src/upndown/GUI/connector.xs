@@ -23,6 +23,8 @@
       <Combobox :Name="ThirdPlayer" :X="122" :Y="54" :Width="141" :Height="120"></Combobox>
       <Combobox :Name="FourthPlayer" :X="122" :Y="85" :Width="141" :Height="120"></Combobox>
     </Panel>
+    <Button :Name="cmdSearch" :X="300" :Y="139" :Width="145" :Height="25" :Enabled="true" Caption="Search players">
+    </Button>
   </Panel>
   <Button :Name="cmdQuit" :X="379" :Y="312" :Width="145" :Height="25" Caption="Quit Game">
   </Button>
