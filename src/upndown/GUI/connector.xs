@@ -1,5 +1,5 @@
 <Form :Name="Connector" :Height="375" :Width="560" Caption="Up'N'Down: Establish connections with other players">
-  <RadioButtonGroup :Name="rbgConnectType" :X="7" :Y="1" :Width="522" :Height="60" :SelectedIndex="0" Caption=" Begin game as... ">
+  <RadioButtonGroup :Name="rbgConnectType" :X="7" :Y="1" :Width="522" :Height="60" :SelectedIndex="0" Caption=" Begin game as... " :onIndexChanged="&onConnectTypeChange">
     <Item Caption="&Host"></Item>
     <Item Caption="&Client"></Item>
   </RadioButtonGroup>
