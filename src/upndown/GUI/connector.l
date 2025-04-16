@@ -42,6 +42,11 @@ public class Connector : XForm, using(Connector)
          }
    }
 
+   private onUserNameChange(sender)
+   {
+      cmdSearch.Enabled := !txtUserName.Value.isEmpty()
+   }
+
    private onPlayerChange(sender)
    {
       
