@@ -44,7 +44,7 @@
     <Label :Name="Label5" :X="25" :Y="22" :Width="95" :Height="20" Caption="Enter Host IP:"></Label>
     <Edit  :Name="HostIP" :X="124" :Y="20" :Width="108" :Height="24"></Edit>
   </Panel>
-  <Button :Name="cmdQuit" :X="379" :Y="312" :Width="145" :Height="25" Caption="Quit Game">
+  <Button :Name="cmdQuit" :X="379" :Y="312" :Width="145" :Height="25" Caption="Quit Game" :onClick="&onExit">
   </Button>
   <Button :Name="cmdStart" :X="13" :Y="312" :Width="145" :Height="25" Caption="Start Game">
   </Button>
