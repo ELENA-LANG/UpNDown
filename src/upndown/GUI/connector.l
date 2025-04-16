@@ -2,15 +2,52 @@ import xforms;
 
 public class Connector : XForm, using(Connector)
 {   
-   private onConnectTypeChange(group)
+   private onConnectTypeChange(sender)
    {
-      bool hostMode := group.SelectedIndex == 0;
+      bool hostMode := sender.SelectedIndex == 0;
       
       pnlClient.Visible := !hostMode;
       pnlHost.Visible := hostMode;   
    }
 
-   private onQuit()
+   private onGameVariantChange(sender)
+   {
+      (sender.SelectedIndex) =>
+         0 : {
+            SPLabel.Visible := true;
+            TPLabel.Visible := false;
+            FPLabel.Visible := false;
+            
+            SecondPlayer.Visible := true;
+            ThirdPlayer.Visible := false;
+            FourthPlayer.Visible := false;
+         }
+         1 : {
+            SPLabel.Visible := true;
+            TPLabel.Visible := true;
+            FPLabel.Visible := false;
+            
+            SecondPlayer.Visible := true;
+            ThirdPlayer.Visible := true;
+            FourthPlayer.Visible := false;
+         }
+         2 : {
+            SPLabel.Visible := true;
+            TPLabel.Visible := true;
+            FPLabel.Visible := true;
+            
+            SecondPlayer.Visible := true;
+            ThirdPlayer.Visible := true;
+            FourthPlayer.Visible := true;
+         }
+   }
+
+   private onPlayerChange(sender)
+   {
+      
+   }
+
+   private onQuit(sender)
    {
       self.close();
       forward program.stop()

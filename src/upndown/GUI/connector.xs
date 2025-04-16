@@ -10,7 +10,7 @@
     <Edit  :Name="txtPassword" :X="377" :Y="20" :Width="115" :Height="24"></Edit>
   </Panel>
   <Panel :Name="pnlHost" :X="7" :Y="110" :Width="522" :Height="197" Caption=" Host panel ">
-    <RadioButtonGroup :Name="GameVariant" :X="10" :Y="18" :Width="191" :Height="118" :SelectedIndex="2" Caption=" Choose game variant ">
+    <RadioButtonGroup :Name="GameVariant" :X="10" :Y="18" :Width="191" :Height="118" :SelectedIndex="2" Caption=" Choose game variant " :onIndexChanged="&onGameVariantChange">
       <Item Caption="Two players"></Item>
       <Item Caption="Three players"></Item>
       <Item Caption="Four players"></Item>
@@ -44,8 +44,8 @@
     <Label :Name="Label5" :X="25" :Y="22" :Width="95" :Height="20" Caption="Enter Host IP:"></Label>
     <Edit  :Name="HostIP" :X="124" :Y="20" :Width="108" :Height="24"></Edit>
   </Panel>
-  <Button :Name="cmdQuit" :X="379" :Y="312" :Width="145" :Height="25" Caption="Quit Game" :onClick="&onExit">
+  <Button :Name="cmdQuit" :X="379" :Y="312" :Width="145" :Height="25" Caption="Quit Game" :onClick="&onQuit">
   </Button>
-  <Button :Name="cmdStart" :X="13" :Y="312" :Width="145" :Height="25" Caption="Start Game">
+  <Button :Name="cmdStart" :X="13" :Y="312" :Width="145" :Height="25" Caption="Start Game" :Enabled="false">
   </Button>
 </Form>
